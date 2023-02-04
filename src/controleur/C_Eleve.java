@@ -43,7 +43,7 @@ public class C_Eleve {
         // saisir l'id du client Ã  supprimer
         Scanner sc = new Scanner(System.in);
         int idEleve;
-        System.out.println("Donner l'id du client Ã  supprimer :");
+        System.out.println("Donner l'id de l'élève à supprimer :");
         idEleve = sc.nextInt();
 
         // supprimer le client dans la BDD avec cet id
