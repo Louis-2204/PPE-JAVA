@@ -21,7 +21,7 @@ public class C_Moniteur {
     }
 
     public static void updateMoniteur() {
-        // saisir l'id du client à modifier
+        // saisir l'id du moniteur à modifier
         Scanner sc = new Scanner(System.in);
         int idMoniteur;
         System.out.println("Donner l'id du moniteur à modifier :");
@@ -46,7 +46,7 @@ public class C_Moniteur {
         System.out.println("Donner l'id du moniteur à supprimer :");
         idMoniteur = sc.nextInt();
 
-        // supprimer le client dans la BDD avec cet id
+        // supprimer le moniteur dans la BDD avec cet id
         ModeleMoniteur.deleteMoniteur(idMoniteur);
 
         System.out.println("Suppression du moniteur réussie");

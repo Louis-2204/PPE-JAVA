@@ -1,5 +1,75 @@
 package vue;
 
-public class VueFormule {
+import java.util.Scanner;
+import controleur.Formule;
 
+public class VueFormule {
+    public static Formule saisirFormule() {
+        Scanner sc = new Scanner(System.in);
+        int choix;
+
+        System.out.println("Voulez vous saisir une formule avec type de boite ? (1: oui, 2: non)");
+        choix = sc.nextInt();
+
+        if (choix == 1) {
+            System.out.println("Donner le nom de la formule :");
+            String nom_f = sc.nextLine();
+
+            System.out.println("Donner le prix de la formule :");
+            float prix_f = sc.nextFloat();
+
+            System.out.println("Donner le nombre d'heures de la formule :");
+            float nb_heures = sc.nextFloat();
+
+            System.out.println("Donner le type de boite de la formule :");
+            String type_boite = sc.nextLine();
+            Formule uneFormule = new Formule(nom_f, prix_f, nb_heures, type_boite);
+            return uneFormule;
+        } else if (choix == 2) {
+            System.out.println("Donner le nom de la formule :");
+            String nom_f = sc.nextLine();
+
+            System.out.println("Donner le prix de la formule :");
+            float prix_f = sc.nextFloat();
+
+            System.out.println("Donner le nombre d'heures de la formule :");
+            float nb_heures = sc.nextFloat();
+
+            Formule uneFormule = new Formule(nom_f, prix_f, nb_heures);
+            return uneFormule;
+        } else {
+            System.out.println("Erreur de saisie");
+            return null;
+        }
+
+    }
+
+    public static void afficherFormule(Formule uneFormule) {
+        System.out.println("Nom de la formule : " + uneFormule.getNom_f());
+        System.out.println("Prix de la formule : " + uneFormule.getPrix_f());
+        System.out.println("Nombre d'heures de la formule : " + uneFormule.getNb_heures());
+        System.out.println("Type de boite de la formule : " + uneFormule.getType_boite());
+    }
+
+    public static Formule modifierFormule(Formule uneFormule) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Ancien nom de la formule : " + uneFormule.getNom_f());
+        System.out.println("Nouveau nom de la formule : ");
+        uneFormule.setNom_f(sc.nextLine());
+
+        System.out.println("Ancien prix de la formule : " + uneFormule.getPrix_f());
+        System.out.println("Nouveau prix de la formule : ");
+        uneFormule.setPrix_f(sc.nextFloat());
+
+        System.out.println("Ancien nombre d'heures de la formule : " + uneFormule.getNb_heures());
+        System.out.println("Nouveau nombre d'heures de la formule : ");
+        uneFormule.setNb_heures(sc.nextFloat());
+
+        System.out.println("Ancien type de boite de la formule : " + uneFormule.getType_boite());
+        System.out.println("Nouveau type de boite de la formule : ");
+        uneFormule.setType_boite(sc.nextLine());
+
+        return uneFormule;
+    }
 }
