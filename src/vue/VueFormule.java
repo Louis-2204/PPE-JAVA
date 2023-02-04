@@ -21,7 +21,7 @@ public class VueFormule {
             System.out.println("Donner le nombre d'heures de la formule :");
             float nb_heures = sc.nextFloat();
 
-            System.out.println("Donner le type de boite de la formule :");
+            System.out.println("Donner le type de boite de la formule (Manuelle / Automatique):");
             String type_boite = sc.next();
             Formule uneFormule = new Formule(nom_f, prix_f, nb_heures, type_boite);
             return uneFormule;
@@ -56,7 +56,7 @@ public class VueFormule {
 
         System.out.println("Ancien nom de la formule : " + uneFormule.getNom_f());
         System.out.println("Nouveau nom de la formule : ");
-        uneFormule.setNom_f(sc.nextLine());
+        uneFormule.setNom_f(sc.next());
 
         System.out.println("Ancien prix de la formule : " + uneFormule.getPrix_f());
         System.out.println("Nouveau prix de la formule : ");
@@ -68,7 +68,7 @@ public class VueFormule {
 
         System.out.println("Ancien type de boite de la formule : " + uneFormule.getType_boite());
         System.out.println("Nouveau type de boite de la formule : ");
-        uneFormule.setType_boite(sc.nextLine());
+        uneFormule.setType_boite(sc.next());
 
         return uneFormule;
     }
