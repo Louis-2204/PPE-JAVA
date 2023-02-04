@@ -1,7 +1,5 @@
 package controleur;
 
-import java.util.Scanner;
-
 public class Moniteur {
     private int id_m;
     private String nom_m, prenom_m, dateembauche_m, adresse_m, dateobtentionBAFM, codpos_m, tel_m, mdp_m,
