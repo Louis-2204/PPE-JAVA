@@ -64,4 +64,33 @@ public class C_Formule {
             VueFormule.afficherFormule(uneFormule);
         }
     }
+
+    public static void menuFormule() {
+        int choix = 0;
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.println("______Menu Formule______");
+            System.out.println("1- Ajouter une formule");
+            System.out.println("2- Lister les formules");
+            System.out.println("3- Modifier un formule");
+            System.out.println("4- Supprimer un formule");
+            System.out.println("0- Quitter");
+            System.out.println("Votre choix :");
+            choix = sc.nextInt();
+            switch (choix) {
+                case 1:
+                    insertFormule();
+                    break;
+                case 2:
+                    selectAllFormule();
+                    break;
+                case 3:
+                    updateFormule();
+                    break;
+                case 4:
+                    deleteFormule();
+                    break;
+            }
+        } while (choix != 0);
+    }
 }
