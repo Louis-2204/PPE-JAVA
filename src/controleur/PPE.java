@@ -28,6 +28,7 @@ public class PPE {
 					C_Vehicule.menuVehicule();
 					break;
 				case 4:
+					C_Formule.menuFormule();
 					break;
 			}
 		} while (choix != 0);
