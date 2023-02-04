@@ -47,7 +47,7 @@ public class Formule {
         this.nom_f = "";
         this.prix_f = 0;
         this.nb_heures = 0;
-        this.type_boite = null;
+        this.type_boite = "null";
     }
 
     public int getId_f() {
