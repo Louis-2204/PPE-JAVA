@@ -9,19 +9,37 @@ public class ModeleFormule {
     private static Bdd uneBdd = new Bdd("localhost", "autoecole", "root", "");
 
     public static void insertFormule(Formule uneFormule) {
-        String req = "INSERT INTO formule values(null,'"
-                + uneFormule.getNom_f() + "',"
-                + uneFormule.getPrix_f() + ","
-                + uneFormule.getNb_heures() + ",'"
-                + uneFormule.getType_boite() + "')";
-        try {
-            uneBdd.seConnecter();
-            Statement unStat = uneBdd.getMaConnexion().createStatement();
-            unStat.execute(req);
-            unStat.close();
-            uneBdd.seDeconnecter();
-        } catch (SQLException exp) {
-            System.out.println("Erreur d'execution de la requete : " + req);
+
+        if (uneFormule.getType_boite() == "null") {
+            String req = "INSERT INTO formule values(null,'"
+                    + uneFormule.getNom_f() + "',"
+                    + uneFormule.getPrix_f() + ","
+                    + uneFormule.getNb_heures() + ",'"
+                    + "null')";
+            try {
+                uneBdd.seConnecter();
+                Statement unStat = uneBdd.getMaConnexion().createStatement();
+                unStat.execute(req);
+                unStat.close();
+                uneBdd.seDeconnecter();
+            } catch (SQLException exp) {
+                System.out.println("Erreur d'execution de la requete : " + req);
+            }
+        } else {
+            String req = "INSERT INTO formule values(null,'"
+                    + uneFormule.getNom_f() + "',"
+                    + uneFormule.getPrix_f() + ","
+                    + uneFormule.getNb_heures() + ",'"
+                    + uneFormule.getType_boite() + "')";
+            try {
+                uneBdd.seConnecter();
+                Statement unStat = uneBdd.getMaConnexion().createStatement();
+                unStat.execute(req);
+                unStat.close();
+                uneBdd.seDeconnecter();
+            } catch (SQLException exp) {
+                System.out.println("Erreur d'execution de la requete : " + req);
+            }
         }
     }
 
