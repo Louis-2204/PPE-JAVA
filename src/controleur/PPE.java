@@ -22,6 +22,7 @@ public class PPE {
 					C_Eleve.menuEleve();
 					break;
 				case 2:
+					C_Moniteur.menuMoniteur();
 					break;
 				case 3:
 					C_Vehicule.menuVehicule();

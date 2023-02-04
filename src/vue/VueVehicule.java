@@ -38,19 +38,23 @@ public class VueVehicule {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ancien type du vehicule : " + unVehicule.getType_v());
         System.out.println("Nouveau type du vehicule :");
-        String type_v = sc.next();
+        unVehicule.setType_v(sc.next());
 
         System.out.println("Ancien modèle du vehicule : " + unVehicule.getModel_v());
         System.out.println("Nouveau modèle du vehicule :");
-        String model_v = sc.next();
+        unVehicule.setModel_v(sc.next());
 
         System.out.println("Ancienne marque du vehicule : " + unVehicule.getMarque_v());
         System.out.println("Nouvelle marque du vehicule :");
-        String marque_v = sc.next();
+        unVehicule.setMarque_v(sc.next());
 
         System.out.println("Ancienne année d'immatriculation du vehicule : " + unVehicule.getAnnneimmatri_v());
         System.out.println("Nouvelle année d'immatriculation du vehicule :");
-        String annneimmatri_v = sc.next();
+        unVehicule.setAnnneimmatri_v(sc.next());
+
+        System.out.println("Ancienne année d'achat du vehicule : " + unVehicule.getAnneachat_v());
+        System.out.println("Nouvelle année d'achat du vehicule :");
+        unVehicule.setAnneachat_v(sc.next());
 
         return unVehicule;
     }

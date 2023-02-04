@@ -56,51 +56,51 @@ public class VueEleve {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ancien nom de l'eleve : " + unEleve.getNom_e());
         System.out.println("Donner le nouveau nom de l'eleve :");
-        String nom_e = sc.next();
+        unEleve.setNom_e(sc.next());
 
         System.out.println("Ancien prenom de l'eleve : " + unEleve.getPrenom_e());
         System.out.println("Donner le nouveau prenom de l'eleve :");
-        String prenom_e = sc.next();
+        unEleve.setPrenom_e(sc.next());
 
         System.out.println("Ancienne date de naissance de l'eleve : " + unEleve.getDatenai_e());
         System.out.println("Donner la nouvelle date de naissance de l'eleve :");
-        String datenai_e = sc.next();
+        unEleve.setDatenai_e(sc.next());
 
         System.out.println("Ancienne adresse de l'eleve : " + unEleve.getAdresse_e());
         System.out.println("Donner la nouvelle adresse de l'eleve :");
-        String adresse_e = sc.next();
+        unEleve.setAdresse_e(sc.next());
 
         System.out.println("Ancienne ville de l'eleve : " + unEleve.getVille_e());
         System.out.println("Donner la nouvelle ville de l'eleve :");
-        String ville_e = sc.next();
+        unEleve.setVille_e(sc.next());
 
         System.out.println("Ancien code postal de l'eleve : " + unEleve.getCodepos_e());
         System.out.println("Donner le nouveau code postal de l'eleve :");
-        String codepos_e = sc.next();
+        unEleve.setCodepos_e(sc.next());
 
         System.out.println("Ancien email de l'eleve : " + unEleve.getEmail_e());
         System.out.println("Donner le nouveau email de l'eleve :");
-        String email_e = sc.next();
+        unEleve.setEmail_e(sc.next());
 
         System.out.println("Ancien numero de telephone de l'eleve : " + unEleve.getTel_e());
         System.out.println("Donner le nouveau numero de telephone de l'eleve :");
-        String tel_e = sc.next();
+        unEleve.setTel_e(sc.next());
 
         System.out.println("Ancien sexe de l'eleve : " + unEleve.getSexe());
         System.out.println("Donner le nouveau sexe de l'eleve :");
-        String sexe = sc.next();
+        unEleve.setSexe(sc.next());
 
         System.out.println("Ancienne date d'inscription de l'eleve : " + unEleve.getDateinscrip_e());
         System.out.println("Donner la nouvelle date d'inscription de l'eleve :");
-        String dateinscrip_e = sc.next();
+        unEleve.setDateinscrip_e(sc.next());
 
         System.out.println("Ancien mot de passe de l'eleve : " + unEleve.getMdp_e());
         System.out.println("Donner le nouveau mot de passe de l'eleve :");
-        String mdp_e = sc.next();
+        unEleve.setMdp_e(sc.next());
 
         System.out.println("Ancien id de la formation de l'eleve : " + unEleve.getId_formation());
         System.out.println("Donner le nouveau id de la formation de l'eleve :");
-        int id_formation = sc.nextInt();
+        unEleve.setId_formation(sc.nextInt());
 
         return unEleve;
     }

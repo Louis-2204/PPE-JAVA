@@ -10,7 +10,7 @@ public class ModeleMoniteur {
     private static Bdd uneBdd = new Bdd("localhost", "autoecole", "root", "");
 
     public static void insertMoniteur(Moniteur unMoniteur) {
-        String requete = "INSERT INTO client VALUES ( null,'"
+        String requete = "INSERT INTO moniteur VALUES ( null,'"
                 + unMoniteur.getNom_m() + "','"
                 + unMoniteur.getPrenom_m() + "','"
                 + unMoniteur.getDateembauche_m() + "','"
@@ -33,7 +33,7 @@ public class ModeleMoniteur {
     }
 
     public static void updateMoniteur(Moniteur unMoniteur) {
-        String requete = "UPDATE client SET"
+        String requete = "UPDATE moniteur SET"
                 + "nom_m = '" + unMoniteur.getNom_m() + "',"
                 + "prenom_m = '" + unMoniteur.getPrenom_m() + "',"
                 + "dateembauche_m = '" + unMoniteur.getDateembauche_m() + "',"

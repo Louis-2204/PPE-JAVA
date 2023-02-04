@@ -34,7 +34,7 @@ public class ModeleVehicule {
                 + " marque_v = '" + unVehicule.getMarque_v() + "',"
                 + " annneimmatri_v = '" + unVehicule.getAnnneimmatri_v() + "',"
                 + " anneachat_v = '" + unVehicule.getAnneachat_v() + "'"
-                + " WHERE idvehicule = " + unVehicule.getId_v() + ";";
+                + " WHERE id_v = " + unVehicule.getId_v() + ";";
         try {
             uneBdd.seConnecter();
             Statement unStat = uneBdd.getMaConnexion().createStatement();
