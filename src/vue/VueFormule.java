@@ -9,7 +9,7 @@ public class VueFormule {
         int choix = 0;
         Formule uneFormule = null;
 
-        while (choix != 1 || choix != 2) {
+        do {
             System.out.println("Voulez vous saisir une formule avec type de boite ? (1: oui, 2: non)");
             choix = sc.nextInt();
 
@@ -39,7 +39,7 @@ public class VueFormule {
 
                 uneFormule = new Formule(nom_f, prix_f, nb_heures);
             }
-        }
+        } while (choix != 1 || choix != 2);
         return uneFormule;
 
     }
