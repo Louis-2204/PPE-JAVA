@@ -67,7 +67,7 @@ public class VueFormule {
         uneFormule.setNb_heures(sc.nextFloat());
 
         System.out.println("Ancien type de boite de la formule : " + uneFormule.getType_boite());
-        System.out.println("Nouveau type de boite de la formule : ");
+        System.out.println("Nouveau type de boite de la formule (Manuelle / Automatique): ");
         uneFormule.setType_boite(sc.next());
 
         return uneFormule;
