@@ -21,7 +21,7 @@ public class VueFormule {
             System.out.println("Donner le nombre d'heures de la formule :");
             float nb_heures = sc.nextFloat();
 
-            System.out.println("Donner le type de boite de la formule :");
+            System.out.println("Donner le type de boite de la formule (Manuelle / Automatique):");
             String type_boite = sc.next();
             Formule uneFormule = new Formule(nom_f, prix_f, nb_heures, type_boite);
             return uneFormule;
