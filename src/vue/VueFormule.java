@@ -13,7 +13,7 @@ public class VueFormule {
 
         if (choix == 1) {
             System.out.println("Donner le nom de la formule :");
-            String nom_f = sc.nextLine();
+            String nom_f = sc.next();
 
             System.out.println("Donner le prix de la formule :");
             float prix_f = sc.nextFloat();
@@ -22,12 +22,12 @@ public class VueFormule {
             float nb_heures = sc.nextFloat();
 
             System.out.println("Donner le type de boite de la formule :");
-            String type_boite = sc.nextLine();
+            String type_boite = sc.next();
             Formule uneFormule = new Formule(nom_f, prix_f, nb_heures, type_boite);
             return uneFormule;
         } else if (choix == 2) {
             System.out.println("Donner le nom de la formule :");
-            String nom_f = sc.nextLine();
+            String nom_f = sc.next();
 
             System.out.println("Donner le prix de la formule :");
             float prix_f = sc.nextFloat();
