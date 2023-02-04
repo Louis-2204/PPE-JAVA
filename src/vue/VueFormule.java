@@ -56,7 +56,7 @@ public class VueFormule {
 
         System.out.println("Ancien nom de la formule : " + uneFormule.getNom_f());
         System.out.println("Nouveau nom de la formule : ");
-        uneFormule.setNom_f(sc.nextLine());
+        uneFormule.setNom_f(sc.next());
 
         System.out.println("Ancien prix de la formule : " + uneFormule.getPrix_f());
         System.out.println("Nouveau prix de la formule : ");
@@ -68,7 +68,7 @@ public class VueFormule {
 
         System.out.println("Ancien type de boite de la formule : " + uneFormule.getType_boite());
         System.out.println("Nouveau type de boite de la formule : ");
-        uneFormule.setType_boite(sc.nextLine());
+        uneFormule.setType_boite(sc.next());
 
         return uneFormule;
     }
