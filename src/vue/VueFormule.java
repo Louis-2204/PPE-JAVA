@@ -6,41 +6,41 @@ import controleur.Formule;
 public class VueFormule {
     public static Formule saisirFormule() {
         Scanner sc = new Scanner(System.in);
-        int choix;
+        int choix = 0;
+        Formule uneFormule = null;
 
-        System.out.println("Voulez vous saisir une formule avec type de boite ? (1: oui, 2: non)");
-        choix = sc.nextInt();
+        while (choix != 1 || choix != 2) {
+            System.out.println("Voulez vous saisir une formule avec type de boite ? (1: oui, 2: non)");
+            choix = sc.nextInt();
 
-        if (choix == 1) {
-            System.out.println("Donner le nom de la formule :");
-            String nom_f = sc.next();
+            if (choix == 1) {
+                System.out.println("Donner le nom de la formule :");
+                String nom_f = sc.next();
 
-            System.out.println("Donner le prix de la formule :");
-            float prix_f = sc.nextFloat();
+                System.out.println("Donner le prix de la formule :");
+                float prix_f = sc.nextFloat();
 
-            System.out.println("Donner le nombre d'heures de la formule :");
-            float nb_heures = sc.nextFloat();
+                System.out.println("Donner le nombre d'heures de la formule :");
+                float nb_heures = sc.nextFloat();
 
-            System.out.println("Donner le type de boite de la formule (Manuelle / Automatique):");
-            String type_boite = sc.next();
-            Formule uneFormule = new Formule(nom_f, prix_f, nb_heures, type_boite);
-            return uneFormule;
-        } else if (choix == 2) {
-            System.out.println("Donner le nom de la formule :");
-            String nom_f = sc.next();
+                System.out.println("Donner le type de boite de la formule (Manuelle / Automatique):");
+                String type_boite = sc.next();
+                uneFormule = new Formule(nom_f, prix_f, nb_heures, type_boite);
 
-            System.out.println("Donner le prix de la formule :");
-            float prix_f = sc.nextFloat();
+            } else if (choix == 2) {
+                System.out.println("Donner le nom de la formule :");
+                String nom_f = sc.next();
 
-            System.out.println("Donner le nombre d'heures de la formule :");
-            float nb_heures = sc.nextFloat();
+                System.out.println("Donner le prix de la formule :");
+                float prix_f = sc.nextFloat();
 
-            Formule uneFormule = new Formule(nom_f, prix_f, nb_heures);
-            return uneFormule;
-        } else {
-            System.out.println("Erreur de saisie");
-            return null;
+                System.out.println("Donner le nombre d'heures de la formule :");
+                float nb_heures = sc.nextFloat();
+
+                uneFormule = new Formule(nom_f, prix_f, nb_heures);
+            }
         }
+        return uneFormule;
 
     }
 
