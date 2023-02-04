@@ -61,7 +61,7 @@ public class ModeleEleve {
     }
 
     public static void deleteEleve(int id_e) {
-        String requete = "DELETE FROM eleve WHERE ideleve = " + id_e + ";";
+        String requete = "DELETE FROM eleve WHERE id_e = " + id_e + ";";
         try {
             uneBdd.seConnecter();
             Statement unStat = uneBdd.getMaConnexion().createStatement();

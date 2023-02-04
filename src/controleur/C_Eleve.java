@@ -66,7 +66,7 @@ public class C_Eleve {
         }
     }
 
-    public static void menuClient() {
+    public static void menuEleve() {
         int choix = 0;
         Scanner sc = new Scanner(System.in);
         do {
