@@ -34,17 +34,17 @@ public class ModeleMoniteur {
 
     public static void updateMoniteur(Moniteur unMoniteur) {
         String requete = "UPDATE moniteur SET"
-                + "nom_m = '" + unMoniteur.getNom_m() + "',"
-                + "prenom_m = '" + unMoniteur.getPrenom_m() + "',"
-                + "dateembauche_m = '" + unMoniteur.getDateembauche_m() + "',"
-                + "adresse_m = '" + unMoniteur.getAdresse_m() + "',"
-                + "dateobtentionBAFM = '" + unMoniteur.getDateobtentionBAFM() + "',"
-                + "codpos_m = '" + unMoniteur.getCodpos_m() + "',"
-                + "tel_m = '" + unMoniteur.getTel_m() + "',"
-                + "mdp_m = '" + unMoniteur.getMdp_m() + "',"
-                + "email_m = '" + unMoniteur.getEmail_m() + "',"
-                + "ville_m = '" + unMoniteur.getVille_m() + "'"
-                + "WHERE id_m = " + unMoniteur.getId_m() + ";";
+                + " nom_m = '" + unMoniteur.getNom_m() + "',"
+                + " prenom_m = '" + unMoniteur.getPrenom_m() + "',"
+                + " dateembauche_m = '" + unMoniteur.getDateembauche_m() + "',"
+                + " adresse_m = '" + unMoniteur.getAdresse_m() + "',"
+                + " dateobtentionBAFM = '" + unMoniteur.getDateobtentionBAFM() + "',"
+                + " codpos_m = '" + unMoniteur.getCodpos_m() + "',"
+                + " tel_m = '" + unMoniteur.getTel_m() + "',"
+                + " mdp_m = '" + unMoniteur.getMdp_m() + "',"
+                + " email_m = '" + unMoniteur.getEmail_m() + "',"
+                + " ville_m = '" + unMoniteur.getVille_m() + "'"
+                + " WHERE id_m = " + unMoniteur.getId_m() + ";";
         try {
             uneBdd.seConnecter();
             Statement unStat = uneBdd.getMaConnexion().createStatement();
