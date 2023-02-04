@@ -20,7 +20,7 @@ public class Formule {
         this.nom_f = nom_f;
         this.prix_f = prix_f;
         this.nb_heures = nb_heures;
-        this.type_boite = null;
+        this.type_boite = "null";
     }
 
     // Sans id avec type boite
@@ -38,7 +38,7 @@ public class Formule {
         this.nom_f = nom_f;
         this.prix_f = prix_f;
         this.nb_heures = nb_heures;
-        this.type_boite = null;
+        this.type_boite = "null";
     }
 
     // vide
