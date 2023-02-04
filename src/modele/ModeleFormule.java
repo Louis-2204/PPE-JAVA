@@ -14,8 +14,8 @@ public class ModeleFormule {
             String req = "INSERT INTO formule values(null,'"
                     + uneFormule.getNom_f() + "',"
                     + uneFormule.getPrix_f() + ","
-                    + uneFormule.getNb_heures() + ",'"
-                    + "null')";
+                    + uneFormule.getNb_heures() + ","
+                    + "null)";
             try {
                 uneBdd.seConnecter();
                 Statement unStat = uneBdd.getMaConnexion().createStatement();
