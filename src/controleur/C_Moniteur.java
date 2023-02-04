@@ -1,5 +1,11 @@
 package controleur;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import vue.VueMoniteur;
+import modele.ModeleMoniteur;
+
 public class C_Moniteur {
     public static void insertMoniteur() {
         // instanciation de la classe Moniteur
@@ -28,7 +34,7 @@ public class C_Moniteur {
         unMoniteur = VueMoniteur.modifierMoniteur(unMoniteur);
 
         // actualiser le moniteur dans la BDD
-        ModelMoniteur.updateMoniteur(unMoniteur);
+        ModeleMoniteur.updateMoniteur(unMoniteur);
 
         System.out.println("Modification du moniteur réussie");
     }
@@ -41,7 +47,7 @@ public class C_Moniteur {
         idMoniteur = sc.nextInt();
 
         // supprimer le client dans la BDD avec cet id
-        ModelMoniteur.deleteMoniteur(idMoniteur);
+        ModeleMoniteur.deleteMoniteur(idMoniteur);
 
         System.out.println("Suppression du moniteur réussie");
     }
@@ -51,12 +57,12 @@ public class C_Moniteur {
         System.out.println("Liste des moniteurs :");
 
         // récupérer tous les Moniteurs dans la BDD
-        lesClients = ModeleClient.selectAllClient();
+        lesMoniteurs = ModeleMoniteur.selectAllMoniteur();
 
         // on parcourt l'ArrayList
         for (Moniteur unMoniteur : lesMoniteurs) {
             // afficher le Moniteur
-            VueMoniteur.afficherClient(unMoniteur);
+            VueMoniteur.afficherMoniteur(unMoniteur);
         }
     }
 

@@ -56,7 +56,7 @@ public class ModeleMoniteur {
         }
     }
 
-    public static void deleteMoniteur(Moniteur idMoniteur) {
+    public static void deleteMoniteur(int idMoniteur) {
         String requete = "DELETE FROM moniteur WHERE id_m = " + idMoniteur + ";";
         try {
             uneBdd.seConnecter();
